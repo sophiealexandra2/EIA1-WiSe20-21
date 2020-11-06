@@ -4,47 +4,42 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="Aufgabe 1/style.css">
     <title>Contact</title>
-    <style>body {
-        font-family: roboto;
-        font-size: small;
-        background: rgb(167, 180, 169);
-    }
+    <style>
     </style>
 </head>
-<body>
-    <center><p></p><h1>Sophie Alexandra Heuvels</h1><p></p></center>
-        <nav>
-          <ul>
-                <li><a href="contact.htm">Contact</a></li>
-                <li><a href="Aboutme.htm">About Me</a></li>
-                <li><a href="Portfolio Aufgabe 1.html">Portfolio</a></li>
-                <li><a href="Aufgabe 1/Aufgabe1_Neu.htm">Aufgabe 1</a></li>
-            </ul>
-         </nav>
-         <br>
-         <a href="https://www.instagram.com/sophiealexandraphoto"><img src="icon/instagram.png"width="40" height="40" target="new"></a>
-         <a href="https://www.linkedin.com/in/sophie-heuvels"><img src="icon/linkedin.png"width="40" height="40"target="new"></a>
-         <br>
-         <div class="container">
+<body style="background-image: url(background.png)">
+  <nav>
+    <ul>
+          <li><a href="contact.htm">CONTACT</a></li>
+          <li><a href="Aboutme.htm">ABOUT ME</a></li>
+          <li><a href="Portfolio Aufgabe 1.html">PORTFOLIO</a></li>
+      </ul>
+   </nav>
+  <div class="wrapper"> 
+    <h2 class="title"> portfolio <h2>
+    <h3 class="subtitle"> Lorem Ipsum </h3>
+    <p class="content">Lorem ipsum dolor sit <br> amet consectetur</p>
+    <img class="icon" src="icon/facebook.png" alt="FB">
+  </div>
+        <div class="Kontaktform-Titel">
+        <h1>KONTAKT</h1>
+         </div>
+<div class="container">
             <form action="action_page.php">
           
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="fname"></label>
+              <input type="text" id="fname" name="firstname" placeholder="Vorname">
           
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-          
-              <label for="country">Country</label>
-              <select id="country" name="country">
-                <option value="Deutschland">Deutschland</option>
-                <option value="Kanada">Kanada</option>
-                <option value="usa">USA</option>
-              </select>
-          
-              <label for="subject">Subject</label>
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-          
-              <input type="submit" value="Submit">
+              <label for="lname"></label>
+              <input type="text" id="lname" name="lastname" placeholder="Nachname">
+
+              <label for="lname"></label>
+              <input type="text" id="lname" name="lastname" placeholder="Email">
+
+              <label for="subject"></label>
+              <textarea id="subject" name="subject" placeholder="Nachricht" style="height:200px"></textarea>
+          <p>Mit Absenden der Nachricht bestätige ich den Datenschutz</p>
+              <input type="submit" value="Absenden">
           
             </form>
           </div>

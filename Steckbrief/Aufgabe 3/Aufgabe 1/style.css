@@ -1,46 +1,128 @@
 body {
-    font-family: roboto;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: small;
-    background: rgb(167, 180, 169);
+    position: absolute;
+    max-width: 800px;
+    padding-left: 200px;
+    padding-right: 200px;
 }
+
 ul {
-font-family:Georgia, 'Times New Roman', Times, serif;
-list-style-type: none;
-margin: 0;
-padding: 0;
+z-index: 900;
+float: right;
+position: sticky;
+width: 360px;
+list-style-type:none;
+margin: -10px;
+padding: 0px;
 overflow: hidden;
-background-color: rgb(65, 65, 65);
+background-color: black;
+border-bottom-left-radius: 5px;  
+border-bottom-right-radius: 5px;
+border-top-left-radius: 5px;  
+border-top-right-radius: 5px;
 }
+
+/* Icon Anfang */
+.wrapper {
+  position: relative;
+  margin-left: 100px;
+  margin-top: -10px;
+  width: 600px;
+  height: 300px; 
+  background-color: rgb(187, 57, 57);
+  border-bottom-left-radius: 400px;  
+  border-bottom-right-radius: 400px;
+  border: 10px solid rgb(187, 57, 57);
+  border-bottom: 0;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 135px;
+  color: rgb(255, 255, 255);
+  letter-spacing: -9px;
+  margin-top: 105px;
+}
+
+.subtitle {
+   position: absolute;
+  top: 160px;
+  left: 60%;
+  color: rgb(255, 255, 255);
+}
+
+.content {
+   position: absolute;
+  top: 190px;
+  left: 60%;
+  color: rgb(255, 255, 255);
+}
+
+.icon {
+  position: absolute;
+  width: 30px;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 75px;
+  opacity: 70%;
+}
+
+.text {
+  max-width: 400px;
+}
+/* Icon Ende */
+
 li {
-float: left;
+float: right;
+border-top: 15px;
 }
+
 li a {
 display: block;
 color: white;
-text-align: center;
-padding: 14px 16px;
+text-align: left;
+font-size: 14px;
+padding: 5px 19px;
 text-decoration: none;
 }
+
 li a:hover {
 background-color: #111;
+color: lightcoral;
+}
+
+.Kontaktform-Titel
+{
+  margin-top: 140px;
+  margin-bottom: 35px;
+font-size: 18px;
+color:  rgb(187, 57, 57); 
 }
 
 /* ContactFormStart */
 input[type=text], select, textarea {
-    width: 100%; 
-    padding: 12px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
+    color: white;
+    width: 70%; 
+    padding: 7px; 
+    border: 1px solid rgb(173, 173, 173); 
+    border-radius: 3px; 
     box-sizing: border-box; 
     margin-top: 6px; 
     margin-bottom: 16px; 
-    resize: vertical 
+    resize: vertical;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(173, 173, 173);
+    }
+  #subject { width: 90%;
+
   }
-  
   /* submit button */
   input[type=submit] {
-    background-color: #173518;
-    color: white;
+    color: rgb(173, 173, 173);
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -49,35 +131,33 @@ input[type=text], select, textarea {
   
   /* Hover stuff */
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: rgb(29, 29, 29);
   }
   
   .container {
     border-radius: 5px;
-    background-color: #dbeece;
     padding: 20px;
+    margin-top: 15px;
   }
 
 
 /* Portfolio Fotos*/
   #Fotos {
+    font-family: Arial, Helvetica, sans-serif;
     display: table;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%
+    max-width: 800px;
+    color: rgb(104, 31, 31);
+    padding-top: 180px;
     
    
   }
-  
-  #Fotos a {
-    display: table-cell;
-    vertical-align: middle;
-  }
 
-  #Travelfotos {
+  #Video {
+    font-family: Arial, Helvetica, sans-serif;
     display: inline-table;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%
-   
+    vertical-align: left;
+    max-width: 800px;
+    color: rgb(104, 31, 31);
+    padding-top: 80px;
+
   }
