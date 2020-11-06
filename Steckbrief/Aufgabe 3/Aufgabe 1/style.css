@@ -10,10 +10,11 @@ body {
 ul {
 z-index: 900;
 float: right;
-position: sticky;
+position: fixed;
 width: 315px;
 list-style-type:none;
 margin: -10px;
+margin-left: 650px;
 padding: 0px;
 overflow: hidden;
 background-color: black;
