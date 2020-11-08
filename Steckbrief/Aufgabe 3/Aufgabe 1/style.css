@@ -3,8 +3,7 @@ body {
     font-size: small;
     position: absolute;
     max-width: 800px;
-    padding-left: 200px;
-    padding-right: 200px;
+  
 }
 
 ul {
@@ -14,7 +13,7 @@ position: fixed;
 width: 315px;
 list-style-type:none;
 margin: -10px;
-margin-left: 650px;
+margin-left: 500px;
 padding: 0px;
 overflow: hidden;
 background-color: black;
@@ -27,14 +26,14 @@ border-top-right-radius: 5px;
 /* Icon Anfang */
 .wrapper {
   position: relative;
-  margin-left: 100px;
+  margin-left: 150px;
   margin-top: -10px;
-  width: 800px;
-  height: 400px; 
-  background-color: rgb(187, 57, 57);
-  border-bottom-left-radius: 400px;  
-  border-bottom-right-radius: 400px;
-  border: 10px solid rgb(187, 57, 57);
+  width: 500px;
+  height: 300px; 
+  background-color: rgb(74, 90, 84);
+  border-bottom-left-radius: 300px;  
+  border-bottom-right-radius: 300px;
+  border: 10px solid rgb(74, 90, 84);
   border-bottom: 0;
 }
 
@@ -42,7 +41,7 @@ border-top-right-radius: 5px;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 135px;
+  font-size: 115px;
   color: rgb(255, 255, 255);
   letter-spacing: -9px;
   margin-top: 105px;
@@ -69,13 +68,19 @@ border-top-right-radius: 5px;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 75px;
-  opacity: 70%;
+  opacity: 60%;
+  
 }
+
+.icon:hover {opacity: 100%;
+  }
+
 
 .text {
   max-width: 400px;
 }
 /* Icon Ende */
+
 
 li {
 float: right;
@@ -91,32 +96,37 @@ padding: 5px 19px;
 text-decoration: none;
 }
 
+
 li a:hover {
 background-color: #111;
-color: lightcoral;
+color: rgb(17, 143, 143);
 }
+
 
 .Kontaktform-Titel
 {
   margin-top: 140px;
   margin-bottom: 35px;
+  margin-left: 150px;
 font-size: 18px;
-color:  rgb(187, 57, 57); 
+color:  rgb(17, 143, 143); 
 }
 
 /* ContactFormStart */
 input[type=text], select, textarea {
+  color: white;
     width: 70%; 
     padding: 7px; 
-    border: 1px solid rgb(173, 173, 173); 
-    border-radius: 3px; 
+    border: 1px solid dimgray;
+    border-radius: 1px; 
     box-sizing: border-box; 
     margin-top: 6px; 
     margin-bottom: 16px; 
+    margin-left: 150px;
     resize: vertical;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
-    background-color: rgb(173, 173, 173);
+    background-color: rgb(206, 206, 206);
     }
 
 
@@ -126,16 +136,19 @@ input[type=text], select, textarea {
 
   /* submit button */
   input[type=submit] {
-    color: rgb(173, 173, 173);
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-left: 150px;
   }
   
   /* Hover stuff */
   input[type=submit]:hover {
-    background-color: rgb(29, 29, 29);
+    background-color: rgb(112, 112, 112);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 1px; 
+    margin-left: 150px;
   }
   
   .container {
@@ -146,23 +159,30 @@ input[type=text], select, textarea {
 
 
 /* Portfolio Fotos*/
+
   #Fotos {
     font-family: Arial, Helvetica, sans-serif;
-    display: table;
-    max-width: 800px;
     color: rgb(187, 57, 57);
+    text-align:center;
     padding-top: 180px;
-    font-size: 18px;    
-   
+    font-size: 18px;  
+    max-width: 800px; 
+    padding-bottom: 15px;
+    float: left;
+
   }
 
   #Video {
     font-family: Arial, Helvetica, sans-serif;
-    display: inline-table;
-    vertical-align: left;
+    text-align:center;
+    display:block;
     max-width: 800px;
     color: rgb(187, 57, 57);
     padding-top: 80px;
     font-size: 18px
 
   }
+
+ p{ margin-left: 150px;
+padding-bottom: 15px;
+color: gray;}
