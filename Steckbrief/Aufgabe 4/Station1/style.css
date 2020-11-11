@@ -3,13 +3,44 @@ body {margin: 0;
 }
 
 
-#Karte { position: absolute;
-    top: -9999px;
-    bottom: -9999px;
-    left: -9999px;
-    right: -9999px;
-    margin: auto;
+.container {
+    position: absolute;
+    text-align: center;
+    color: white;
+    margin-left: 33%;
+    margin-top: 15%;
     
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-style: oblique;
+  }
+
+ .top-left {
+position: absolute;
+  top: 20%;
+  left: 30%;
+  font-size: 30px;
+
+ }
 
 
-}
+ .container2 { 
+position: absolute;
+transform: translate(0%, 0%);
+top: -14%;
+left: -8%;
+ }
+
+
+ .container3 {position: absolute;
+top: 53%;
+right: 0%;
+transform: translate(0%, -10%);
+
+ }
