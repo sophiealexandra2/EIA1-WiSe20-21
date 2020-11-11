@@ -1,0 +1,15 @@
+body {margin: 0;
+    padding: 0;
+}
+
+
+#Karte { position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+    
+
+
+}
