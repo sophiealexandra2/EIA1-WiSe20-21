@@ -18,13 +18,13 @@ var australia18 : number = 2100.5;
 
 var total : number = africa18 + southamerica18 + europe18 + northamerica18 + asia18 + australia18;
 
-console. log ('Die Emission von Europa ist' + europe18 + 'kg CO2');
-console. log('Relativ zur Gesamtemission der Welt verursacht Europa damit' + (europe18/total*100) + '%')
-console. log ('Für Europa hat sich 2018 im Vergleich zu 2008 die Emission um' + (europe18/europe08*100) + '% verändert')
-console. log ('2018 im Vergleich zu 2008 sind das' + (europe18-europe08) + 'kg CO2')
+console. log ("Die Emission von Europa ist " + europe18 + "kg CO2");
+console. log("Relativ zur Gesamtemission der Welt verursacht Europa damit" + (europe18/total*100) + "%")
+console. log ("Für Europa hat sich 2018 im Vergleich zu 2008 die Emission um" + (europe18/europe08*100) + "% verändert")
+console. log ("2018 im Vergleich zu 2008 sind das" + (europe18-europe08) + "kg CO2")
 
 console.log ('Die Emission von Afrika ist' + africa18 + 'kg CO2');
-console. log('Relativ zur Gesamtemission der Welt verursacht Afrika damit' + (africa18/total*100) + '%')
+console. log('Relativ zur Gesamtemission der Welt verursacht Afrika damit' + (africa18/total*100) + "%")
 console. log ('Für Afrika hat sich 2018 im Vergleich zu 2008 die Emission um' + (africa18/africa08*100) + '% verändert')
 console. log ('2018 im Vergleich zu 2008 sind das' + (africa18-africa08) + 'kg CO2')
 
