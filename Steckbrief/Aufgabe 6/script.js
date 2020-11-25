@@ -45,27 +45,21 @@ var NAME;
         document.querySelector(".chart").setAttribute('style', 'height:' + (Wert2018 / Gesamtemission * 100).toFixed(2) + '%');
         document.querySelector("#titleregion").innerHTML = Kontinent;
     }
-    // Europe //
     document.getElementById("europe").addEventListener("click", function () {
         FunktionAllgemein(Europa2018, AnteilEuropa, ProzentualeVeränderungEuropa, VeränderungCO2Europa, "Europe");
     });
-    // Asia //
     document.getElementById("asia").addEventListener("click", function () {
         FunktionAllgemein(Asien2018, AnteilAsien, ProzentualeVeränderungAsien, VeränderungCO2Asien, "Asia");
     });
-    // Northamerica //
     document.getElementById("northamerica").addEventListener("click", function () {
         FunktionAllgemein(Nordamerika2018, AnteilNordamerika, ProzentualeVeränderungNordamerika, VeränderungCO2Nordamerika, "Northamerica");
     });
-    // Southamerica //
     document.getElementById("southamerica").addEventListener("click", function () {
         FunktionAllgemein(Südamerika2018, AnteilSüdamerika, ProzentualeVeränderungSüdamerika, VeränderungCO2Südamerika, "Southamerica");
     });
-    // Africa //
     document.getElementById("africa").addEventListener("click", function () {
         FunktionAllgemein(Afrika2018, AnteilAfrika, ProzentualeVeränderungAfrika, VeränderungCO2Afrika, "Africa");
     });
-    // Australia //
     document.getElementById("australia").addEventListener("click", function () {
         FunktionAllgemein(Australien2018, AnteilAustralien, ProzentualeVeränderungAustralien, VeränderungCO2Australien, "Australia");
     });
