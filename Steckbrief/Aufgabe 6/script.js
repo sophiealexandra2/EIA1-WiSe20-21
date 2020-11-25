@@ -29,7 +29,7 @@ var NAME;
     var ProzentualeVeränderungSüdamerika = (((Südamerika2018 / Südamerika2008) - 1) * 100);
     var ProzentualeVeränderungAfrika = (((Afrika2018 / Afrika2008) - 1) * 100);
     var ProzentualeVeränderungAustralien = (((Australien2018 / Australien2008) - 1) * 100);
-    /* Vergleich CO2 in kg - Kontinente 2008 / 2018 */
+    /* Vergleich CO2 in kg - Kontinente 2008 - 2018 */
     var VeränderungCO2Europa = (Europa2018 - Europa2008);
     var VeränderungCO2Asien = (Asien2018 - Asien2008);
     var VeränderungCO2Nordamerika = (Nordamerika2018 - Nordamerika2008);

@@ -38,7 +38,7 @@
     const ProzentualeVeränderungAfrika : number = (((Afrika2018 / Afrika2008) -1) * 100);
     const ProzentualeVeränderungAustralien : number = (((Australien2018 / Australien2008) -1) * 100);
 
-    /* Vergleich CO2 in kg - Kontinente 2008 / 2018 */
+    /* Vergleich CO2 in kg - Kontinente 2008 - 2018 */
 
     const VeränderungCO2Europa : number = (Europa2018 - Europa2008);
     const VeränderungCO2Asien : number = (Asien2018 - Asien2008);
