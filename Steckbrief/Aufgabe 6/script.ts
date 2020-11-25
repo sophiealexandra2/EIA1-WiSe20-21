@@ -1,6 +1,4 @@
- 
-
-namespace NAME {                                            
+ namespace NAME {                                            
     const Europa2008 : number = 4965.7;
     const Europa2018 : number = 4209.3;
 
