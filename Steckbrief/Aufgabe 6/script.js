@@ -1,5 +1,3 @@
-/* Emissionswerte für die Kontinente 2008 und 2018 */
-// Namespace benutze ich, wenn ich in einer anderen Datei die gleichen Konstanten habe //  
 var NAME;
 (function (NAME) {
     var Europa2008 = 4965.7;

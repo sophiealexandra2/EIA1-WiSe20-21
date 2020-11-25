@@ -1,6 +1,4 @@
-/* Emissionswerte für die Kontinente 2008 und 2018 */
-
-// Namespace benutze ich, wenn ich in einer anderen Datei die gleichen Konstanten habe //  
+ 
 
 namespace NAME {                                            
     const Europa2008 : number = 4965.7;
