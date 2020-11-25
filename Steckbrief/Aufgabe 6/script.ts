@@ -50,7 +50,7 @@
 
     // Function //
 
-   function FunktionAllgemein(Wert2018:number, Anteil:number, ProzentualeVeränderung: number, VeränderungCO2: number, Kontinent: string) {
+    function FunktionAllgemein(Wert2018:number, Anteil:number, ProzentualeVeränderung: number, VeränderungCO2: number, Kontinent: string) {
     document.getElementById("AbsoluterWert").innerHTML = Wert2018.toFixed(2) + "kg CO2";
     document.getElementById("RelativerWert").innerHTML = Anteil.toFixed(2) + "%";
     document.getElementById("WachstumsrateProzent").innerHTML = ProzentualeVeränderung.toFixed(2) + "%";
