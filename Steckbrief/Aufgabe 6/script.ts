@@ -15,8 +15,7 @@
 
     /* Emission Kontinente 2018 */
 
-    const Gesamtemission : number = Europa2018 + Asien2018 + Nordamerika2018
-    + Südamerika2018 + Afrika2018 + Australien2018
+    const Gesamtemission : number = Europa2018 + Asien2018 + Nordamerika2018 + Südamerika2018 + Afrika2018 + Australien2018
 
 
     /* % alle Kontinente 2018 */

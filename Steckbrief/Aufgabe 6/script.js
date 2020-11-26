@@ -13,8 +13,7 @@ var NAME;
     var Australien2008 = 1993;
     var Australien2018 = 2100.5;
     /* Emission Kontinente 2018 */
-    var Gesamtemission = Europa2018 + Asien2018 + Nordamerika2018
-        + Südamerika2018 + Afrika2018 + Australien2018;
+    var Gesamtemission = Europa2018 + Asien2018 + Nordamerika2018 + Südamerika2018 + Afrika2018 + Australien2018;
     /* % alle Kontinente 2018 */
     var AnteilEuropa = ((Europa2018 / Gesamtemission) * 100);
     var AnteilAsien = ((Asien2018 / Gesamtemission) * 100);
