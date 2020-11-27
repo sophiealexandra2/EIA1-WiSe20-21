@@ -59,33 +59,33 @@
 
    }
 
-    document.getElementById("europe").addEventListener("click", function () {
+    document.getElementById("Europe").addEventListener("click", function () {
         FunktionAllgemein(Europa2018, AnteilEuropa, ProzentualeVeränderungEuropa, VeränderungCO2Europa, "Europe")
 
     })
       
-    document.getElementById("asia").addEventListener("click", function () {
+    document.getElementById("Asia").addEventListener("click", function () {
         FunktionAllgemein(Asien2018, AnteilAsien, ProzentualeVeränderungAsien, VeränderungCO2Asien, "Asia")
 
     })
 
-    document.getElementById("northamerica").addEventListener("click", function () {
+    document.getElementById("Northamerica").addEventListener("click", function () {
         FunktionAllgemein(Nordamerika2018, AnteilNordamerika, ProzentualeVeränderungNordamerika, VeränderungCO2Nordamerika, "Northamerica")
 
     })
 
-    document.getElementById("southamerica").addEventListener("click", function () {
+    document.getElementById("Southamerica").addEventListener("click", function () {
         FunktionAllgemein(Südamerika2018, AnteilSüdamerika, ProzentualeVeränderungSüdamerika, VeränderungCO2Südamerika, "Southamerica")
 
     })
 
-    document.getElementById("africa").addEventListener("click", function () {
+    document.getElementById("Africa").addEventListener("click", function () {
         FunktionAllgemein(Afrika2018, AnteilAfrika, ProzentualeVeränderungAfrika, VeränderungCO2Afrika, "Africa")
 
     })
 
 
-    document.getElementById("australia").addEventListener("click", function () {
+    document.getElementById("Australia").addEventListener("click", function () {
         FunktionAllgemein(Australien2018, AnteilAustralien, ProzentualeVeränderungAustralien, VeränderungCO2Australien, "Australia")
 
     })
