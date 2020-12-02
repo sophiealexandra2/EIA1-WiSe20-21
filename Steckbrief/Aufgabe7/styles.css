@@ -8,3 +8,38 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+.drumpad{
+    display:flex;
+    width: 400px;
+    height: 550px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.container div{
+    width: 150px;
+    height: 150px;
+    border-radius: 15%;
+}
+
+.drumpad1, .drumpad2, .drumpad3, .drumpad4{
+    background-color: #E84A5F;
+}
+
+.drumpad5{
+    background-color: #99B898;
+}
+
+.drumpad6, .drumpad9{
+    background-color: #FECEA8;
+}
+
+.drumpad7, .drumpad8{
+    background-color: #FF847C;
+}
+
+.playbutton{
+    cursor: pointer;
+}
