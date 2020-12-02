@@ -10,8 +10,8 @@ body{
 }
 
 .drumpad{
-    width: 400px;
-    height: 550px;
+    width: 500px;
+    height: 650px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -21,8 +21,9 @@ body{
 .drumpad div{
     width: 150px;
     height: 150px;
-    border-radius: 15%;
+    border-radius: 10%;
 }
+
 
 .drumpad1, .drumpad2, .drumpad4{
     background-color: #58787a;
@@ -38,8 +39,4 @@ body{
 
 .drumpad7, .drumpad8{
     background-color: #FF847C;
-}
-
-.playbutton{
-    cursor: pointer;
 }

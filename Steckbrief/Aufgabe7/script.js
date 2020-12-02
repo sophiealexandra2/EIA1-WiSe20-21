@@ -46,6 +46,6 @@ document.querySelector(".playbutton").addEventListener("click", function(){
 
 function playSample(i) {
     drumpad[i].play();
-}
-;
+}; 
+
 //# sourceMappingURL=script.js.map
