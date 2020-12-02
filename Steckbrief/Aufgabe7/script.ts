@@ -10,3 +10,4 @@ console.log (nameFriends[1]);
 nameFriends.push('Leon');
 console.log(nameFriends.length);
 
+
