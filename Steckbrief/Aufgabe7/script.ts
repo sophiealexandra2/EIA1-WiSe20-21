@@ -18,27 +18,6 @@ drumpad[6] = new Audio("./assets/hihat.mp3");
 drumpad[7] = new Audio("./assets/laugh-1.mp3");
 drumpad[8] = new Audio("./assets/laugh-2.mp3");
 
-//Intervall//
-document.querySelector(".playbutton").addEventListener("click", function(){
-    setInterval(function() {
-        playbutton();
-    }, 500);
-    });
-
-// Funktion  für PlayButton
-
-function playbutton(){
-    
-    drumpad[2].play();
-    drumpad[3].play();
-    drumpad[4].play();
-
-};
-
-function playSample(i :number){
-    drumpad[i].play();
-};
-
 
 //einzelne buttons//
 document.querySelector(".drumpad1").addEventListener("click", function(){
@@ -76,3 +55,24 @@ document.querySelector(".drumpad8").addEventListener("click", function(){
 document.querySelector(".drumpad9").addEventListener("click", function(){
     playSample(8);
     });
+
+    //Intervall//
+document.querySelector(".playbutton").addEventListener("click", function(){
+    setInterval(function() {
+        playbutton();
+    }, 500);
+    });
+
+// Funktion  für PlayButton
+
+function playbutton(){
+    
+    drumpad[2].play();
+    drumpad[3].play();
+    drumpad[4].play();
+
+};
+
+function playSample(i :number){
+    drumpad[i].play();
+};
