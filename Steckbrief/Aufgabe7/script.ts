@@ -50,14 +50,12 @@ document.querySelector(".drumpad9").addEventListener("click", function(){
     playSample(8);
     });
 
-    //Intervall//
+// Funktion  für PlayButton
 document.querySelector(".playbutton").addEventListener("click", function(){
     setInterval(function() {
         playbutton();
     }, 500);
     });
-
-// Funktion  für PlayButton
 
 function playbutton(){
     
