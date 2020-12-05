@@ -1,4 +1,3 @@
-
 //Sounds//
 var drumpad = [];
 drumpad[0] = new Audio("./assets/snare.mp3");
@@ -10,6 +9,7 @@ drumpad[5] = new Audio("./assets/kick.mp3");
 drumpad[6] = new Audio("./assets/hihat.mp3");
 drumpad[7] = new Audio("./assets/laugh-1.mp3");
 drumpad[8] = new Audio("./assets/laugh-2.mp3");
+//einzelne buttons//
 document.querySelector(".drumpad1").addEventListener("click", function () {
     playSample(0);
 });
@@ -37,15 +37,21 @@ document.querySelector(".drumpad8").addEventListener("click", function () {
 document.querySelector(".drumpad9").addEventListener("click", function () {
     playSample(8);
 });
-
-document.querySelector(".playbutton").addEventListener("click", function(){
-    setInterval(function() {
-        playButton();
+//Intervall//
+document.querySelector(".playbutton").addEventListener("click", function () {
+    setInterval(function () {
+        playbutton();
     }, 500);
-    });
-
+});
+// Funktion  für PlayButton
+function playbutton() {
+    drumpad[3].play();
+    drumpad[4].play();
+    drumpad[5].play();
+}
+;
 function playSample(i) {
     drumpad[i].play();
-}; 
-
+}
+;
 //# sourceMappingURL=script.js.map
