@@ -47,6 +47,7 @@ function playbutton() {
     drumpad[3].play();
     drumpad[4].play();
     drumpad[5].play();
+    drumpad[8].play();
 }
 ;
 function playSample(i) {
