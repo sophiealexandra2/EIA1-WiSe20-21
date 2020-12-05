@@ -1,10 +1,10 @@
     /* Body */
 
-    function changeBackground(color) {
-    document.body.style.background = color;
- }
+   // function changeBackground(color) {
+    //document.body.style.background = color;
+ //}//
  
- window.addEventListener("load",function() { changeBackground('lightblue') });
+ //window.addEventListener("load",function() { changeBackground('lightblue') });//
 
 //Sounds//
 var drumpad = [];
@@ -67,7 +67,6 @@ document.querySelector(".playbutton").addEventListener("click", function(){
 
 function playbutton(){
     
-    drumpad[2].play();
     drumpad[3].play();
     drumpad[4].play();
     drumpad[5].play();
