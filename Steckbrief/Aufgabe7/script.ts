@@ -70,6 +70,7 @@ function playbutton(){
     drumpad[2].play();
     drumpad[3].play();
     drumpad[4].play();
+    drumpad[5].play();
 
 };
 
