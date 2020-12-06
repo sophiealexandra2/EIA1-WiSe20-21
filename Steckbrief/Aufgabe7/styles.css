@@ -9,15 +9,6 @@ body{
     display: flex;
 }
 
-.flowchart {width: 500px;
-    height: 350px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    display:flex;
-
-
-}
 .drumpad{
     width: 500px;
     height: 650px;
