@@ -10,7 +10,7 @@ body{
 }
 
 .flowchart {width: 500px;
-    height: 650px;
+    height: 350px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
