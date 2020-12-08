@@ -1,0 +1,42 @@
+html{
+    height: 100%;
+} 
+
+body{
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+}
+
+.drumpad{
+    width: 500px;
+    height: 650px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    display:flex;
+}
+
+.drumpad div{
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+}
+
+
+.drumpad1, .drumpad2, .drumpad4{
+    background-color: #58787a;
+}
+
+.drumpad5, .drumpad3{
+    background-color: #4b7e49;
+}
+
+.drumpad6, .drumpad9{
+    background-color: #d7a8fe;
+}
+
+.drumpad7, .drumpad8{
+    background-color: #914964;
+}
