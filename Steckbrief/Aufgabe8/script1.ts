@@ -62,6 +62,8 @@ document.querySelector(".drumpad9").addEventListener("click", () => {
 
 let trash: HTMLElement = document.querySelector(".fa-trash-alt");
 let recbutton: HTMLElement = document.querySelector(".fa-microphone");
+let beat: HTMLAudioElement [] = [];
+let abfrage: boolean;
 
 // Funktion  für PlayButton ÄNDERN, playbutton wurde gelöscht
 document.querySelector(".buttons").addEventListener("click", function() {
@@ -70,11 +72,11 @@ document.querySelector(".buttons").addEventListener("click", function() {
     }, 
                 500 );
     });
-    function playbutton() {
-        drumpad[3].play();
-        drumpad[0].play();
-        drumpad[5].play();
-        drumpad[8].play();
+function playbutton() {
+drumpad[3].play();
+drumpad[0].play();
+rumpad[5].play();
+drumpad[8].play();
     
 }
     

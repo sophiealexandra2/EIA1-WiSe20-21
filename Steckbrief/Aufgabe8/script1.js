@@ -46,6 +46,10 @@ document.querySelector(".drumpad9").addEventListener("click", function () {
     playSample(drumpad[8]);
     recbeat(drumpad[8]);
 });
+var trash = document.querySelector(".fa-trash-alt");
+var recbutton = document.querySelector(".fa-microphone");
+var beat = [];
+var abfrage;
 // Funktion  für PlayButton ÄNDERN, playbutton wurde gelöscht
 document.querySelector(".buttons").addEventListener("click", function () {
     setInterval(function () {
@@ -55,7 +59,7 @@ document.querySelector(".buttons").addEventListener("click", function () {
 function playbutton() {
     drumpad[3].play();
     drumpad[0].play();
-    drumpad[5].play();
+    rumpad[5].play();
     drumpad[8].play();
 }
 function playSample(i) {
