@@ -37,8 +37,8 @@ document.querySelector(".drumpad8").addEventListener("click", function () {
 document.querySelector(".drumpad9").addEventListener("click", function () {
     playSample(8);
 });
-// Funktion  für PlayButton
-document.querySelector(".playbutton").addEventListener("click", function () {
+// Funktion  für PlayButton ÄNDERN, playbutton wurde gelöscht
+document.querySelector(".buttons").addEventListener("click", function () {
     setInterval(function () {
         playbutton();
     }, 500);

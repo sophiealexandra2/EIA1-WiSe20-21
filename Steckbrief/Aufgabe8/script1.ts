@@ -50,15 +50,13 @@ document.querySelector(".drumpad9").addEventListener("click", function() {
     playSample(8);
     });
 
-// Funktion  für PlayButton
-document.querySelector(".playbutton").addEventListener("click", function() {
+// Funktion  für PlayButton ÄNDERN, playbutton wurde gelöscht
+document.querySelector(".buttons").addEventListener("click", function() {
     setInterval(function() {
     playbutton();
     }, 
                 500 );
-    });
-
-function playbutton() {
+    });function playbutton() {
         drumpad[3].play();
         drumpad[0].play();
         drumpad[5].play();
@@ -68,4 +66,5 @@ function playbutton() {
     
 function playSample(i: number) {
         drumpad[i].play();
-    }
+}
+

@@ -40,3 +40,9 @@ body{
 .drumpad7, .drumpad8{
     background-color: #914964;
 }
+
+.buttons{
+    display: flex;
+    position: relative;
+    height: 80px;
+}
