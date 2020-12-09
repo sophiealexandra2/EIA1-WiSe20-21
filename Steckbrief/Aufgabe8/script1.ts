@@ -53,19 +53,19 @@ document.querySelector(".drumpad9").addEventListener("click", function() {
 // Funktion  für PlayButton
 document.querySelector(".playbutton").addEventListener("click", function() {
     setInterval(function() {
-        playbutton();
-    }, 500);
+    playbutton();
+    }, 
+                500 );
     });
 
-    function playbutton() {
-    
+function playbutton() {
         drumpad[3].play();
         drumpad[0].play();
         drumpad[5].play();
         drumpad[8].play();
     
-    }
+}
     
-    function playSample(i: number) {
+function playSample(i: number) {
         drumpad[i].play();
     }
