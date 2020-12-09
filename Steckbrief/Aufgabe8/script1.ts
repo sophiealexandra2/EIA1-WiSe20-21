@@ -1,7 +1,7 @@
 
 
 //Sounds//
-var drumpad = [];
+let drumpad = [];
 drumpad[0] = new Audio("./assets/snare.mp3");
 drumpad[1] = new Audio("./assets/G.mp3");
 drumpad[2] = new Audio("./assets/F.mp3");
@@ -56,7 +56,8 @@ document.querySelector(".buttons").addEventListener("click", function() {
     playbutton();
     }, 
                 500 );
-    });function playbutton() {
+    });
+    function playbutton() {
         drumpad[3].play();
         drumpad[0].play();
         drumpad[5].play();
