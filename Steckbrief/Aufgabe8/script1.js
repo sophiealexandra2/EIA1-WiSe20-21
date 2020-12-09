@@ -49,9 +49,7 @@ function playbutton() {
     drumpad[5].play();
     drumpad[8].play();
 }
-;
 function playSample(i) {
     drumpad[i].play();
 }
-;
 //# sourceMappingURL=script1.js.map
