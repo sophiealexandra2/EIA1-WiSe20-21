@@ -7,6 +7,8 @@ body{
     justify-content: center;
     height: 100%;
     display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .drumpad{
@@ -47,3 +49,33 @@ body{
     position: relative;
 
 }
+.fa-play {
+    color: lightcoral;
+    position: absolute;
+    left:0;
+    height: 0;   
+}
+
+.fas{
+    margin: 15px;
+    color: #3f4e45;
+    font-size: 30px;
+}
+
+
+.fa-pause{
+    color: lightcoral;
+    position: absolute;
+    left:0;
+    height: 0;   
+}
+
+
+
+
+.active{
+    color: rgba(32, 61, 207, 0.322);
+}
+
+.inactive{
+    visibility: hidden;}
