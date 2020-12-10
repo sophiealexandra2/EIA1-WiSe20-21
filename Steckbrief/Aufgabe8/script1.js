@@ -1,4 +1,5 @@
 //Sounds//
+// tslint:disable-next-line: variable-name
 var Drumpad = [];
 Drumpad[0] = new Audio("./assets/snare.mp3");
 Drumpad[1] = new Audio("./assets/G.mp3");
