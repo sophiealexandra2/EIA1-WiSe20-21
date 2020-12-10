@@ -1,7 +1,7 @@
 
 
 //Sounds//
-let Drumpad = [];
+var Drumpad = [];
 Drumpad[0] = new Audio("./assets/snare.mp3");
 Drumpad[1] = new Audio("./assets/G.mp3");
 Drumpad[2] = new Audio("./assets/F.mp3");
@@ -60,10 +60,10 @@ document.querySelector(".drumpad9").addEventListener("click", () => {
     });
 
 
-let trash: HTMLElement = document.querySelector(".fa-trash-alt");
-let recbutton: HTMLElement = document.querySelector(".fa-microphone");
-let beat: HTMLAudioElement [] = [];
-let abfrage: boolean;
+var trash: HTMLElement = document.querySelector(".fa-trash-alt");
+var recbutton: HTMLElement = document.querySelector(".fa-microphone");
+var beat: HTMLAudioElement [] = [];
+var abfrage: boolean;
 
 // Funktion  für PlayButton ÄNDERN, playbutton wurde gelöscht
 document.querySelector(".buttons").addEventListener("click", function() {
@@ -120,9 +120,8 @@ function deletingBeat () {
 
 let playButton: HTMLElement = document.querySelector(".fa-play");
 let pauseButton: HTMLElement = document.querySelector(".fa-stop");
-
 let myInterval;    
-let i;
+let i; 
 
 
  //Eventlistener für Play und Pause Button
