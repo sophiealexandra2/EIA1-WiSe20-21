@@ -13,7 +13,7 @@ Drumpad[8] = new Audio("./assets/laugh-2.mp3");
 //einzelne buttons//
 document.querySelector(".drumpad1").addEventListener("click", function () {
     playSample(0);
-    recbeat(Drumpad[0]);
+    recbeat(0);
 });
 document.querySelector(".drumpad2").addEventListener("click", function () {
     playSample(1);
@@ -57,12 +57,6 @@ document.querySelector(".buttons").addEventListener("click", function () {
         playbutton();
     }, 500);
 });
-function playbutton(i) {
-    Drumpad[3].play();
-    Drumpad[0].play();
-    Drumpad[5].play();
-    Drumpad[8].play();
-}
 function playSample(i) {
     Drumpad[i].play();
 }
