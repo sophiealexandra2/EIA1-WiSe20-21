@@ -59,7 +59,7 @@ body{
 .fas{
     margin: 15px;
     color: #3f4e45;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 
@@ -72,7 +72,7 @@ body{
 
 
 .active{
-    color: rgba(32, 61, 207, 0.322);
+    color: rgba(84, 35, 83, 0.322);
 }
 
 .inactive{

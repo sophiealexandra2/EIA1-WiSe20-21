@@ -1,5 +1,4 @@
 //Sounds//
-// tslint:disable-next-line: variable-name
 var Drumpad = [];
 Drumpad[0] = new Audio("./assets/snare.mp3");
 Drumpad[1] = new Audio("./assets/G.mp3");
@@ -17,78 +16,50 @@ document.querySelector(".drumpad1").addEventListener("click", function () {
 });
 document.querySelector(".drumpad2").addEventListener("click", function () {
     playSample(1);
-    recbeat(Drumpad[1]);
+    recbeat(1);
 });
 document.querySelector(".drumpad3").addEventListener("click", function () {
     playSample(2);
-    recbeat(Drumpad[2]);
+    recbeat(2);
 });
 document.querySelector(".drumpad4").addEventListener("click", function () {
     playSample(3);
-    recbeat(Drumpad[3]);
+    recbeat(3);
 });
 document.querySelector(".drumpad5").addEventListener("click", function () {
     playSample(4);
-    recbeat(Drumpad[4]);
+    recbeat(4);
 });
 document.querySelector(".drumpad6").addEventListener("click", function () {
     playSample(5);
-    recbeat(Drumpad[5]);
+    recbeat(5);
 });
 document.querySelector(".drumpad7").addEventListener("click", function () {
     playSample(6);
-    recbeat(Drumpad[6]);
+    recbeat(6);
 });
 document.querySelector(".drumpad8").addEventListener("click", function () {
     playSample(7);
-    recbeat(Drumpad[7]);
+    recbeat(7);
 });
 document.querySelector(".drumpad9").addEventListener("click", function () {
     playSample(8);
-    recbeat(Drumpad[8]);
+    recbeat(8);
 });
+// Funktion  Drumpads, verbessert vom letzten Mal
+function playSample(i) {
+    Drumpad[i].play();
+}
+//Variabeln Rec & delete 
 var trash = document.querySelector(".fa-trash-alt");
 var recbutton = document.querySelector(".fa-microphone");
 var beat = [];
 var abfrage;
-// Funktion  für PlayButton ÄNDERN, playbutton wurde gelöscht
-document.querySelector(".buttons").addEventListener("click", function () {
-    setInterval(function () {
-        playbutton();
-    }, 500);
-});
-function playSample(i) {
-    Drumpad[i].play();
-}
-recbutton.addEventListener("click", function () {
-    if (recbutton.classList.contains("active")) {
-        recbutton.classList.remove("active");
-        abfrage = false;
-    }
-    else {
-        recbutton.classList.add("active");
-        abfrage = true;
-    }
-    recbeat;
-});
-trash.addEventListener("click", function () {
-    deletingBeat();
-});
-function recbeat(i) {
-    console.log(abfrage);
-    if (abfrage == true) {
-        beat.push(i);
-        console.log(beat.length);
-    }
-}
-function deletingBeat() {
-    beat.splice(0, beat.length);
-    console.log(beat.length);
-}
+// Funktion & Variablen play pause
 var playButton = document.querySelector(".fa-play");
 var pauseButton = document.querySelector(".fa-stop");
 var myInterval;
-var i;
+var x = 0;
 //Eventlistener für Play und Pause Button
 playButton.addEventListener("click", function () {
     playSchleife(true);
@@ -100,16 +71,36 @@ pauseButton.addEventListener("click", function () {
     pauseButton.classList.add("inactive");
     playButton.classList.remove("inactive");
 });
-//Funktion für Play und Pause Button
+//Eventlistener rec & delete
+recbutton.addEventListener("click", function () {
+    if (recbutton.classList.contains("active")) {
+        recbutton.classList.remove("active");
+        abfrage = false;
+    }
+    else {
+        recbutton.classList.add("active");
+        abfrage = true;
+    }
+});
+trash.addEventListener("click", function () {
+    beat.splice(0, beat.length);
+});
+//Recording
+function recbeat(i) {
+    if (abfrage == true) {
+        beat.push(i);
+    }
+}
+//Funktion play pause
 function playSchleife(b) {
     if (b == true) {
         myInterval = setInterval(function () {
-            if (i < beat.length) {
-                playSample(drumpad[i]);
-                i++;
+            if (x < beat.length) {
+                playSample(beat[x]);
+                x++;
             }
             else {
-                i = 0;
+                x = 0;
             }
         }, 500);
     }

@@ -1,8 +1,7 @@
 
 
 //Sounds//
-// tslint:disable-next-line: variable-name
-var Drumpad = [];
+let Drumpad = [];
 Drumpad[0] = new Audio("./assets/snare.mp3");
 Drumpad[1] = new Audio("./assets/G.mp3");
 Drumpad[2] = new Audio("./assets/F.mp3");
@@ -15,72 +14,88 @@ Drumpad[8] = new Audio("./assets/laugh-2.mp3");
 
 
 //einzelne buttons//
-document.querySelector(".drumpad1").addEventListener("click", () =>  {
+document.querySelector(".drumpad1").addEventListener("click", function (): void  {
     playSample(0);
     recbeat(0);
     });
 
-document.querySelector(".drumpad2").addEventListener("click", () =>  {
+document.querySelector(".drumpad2").addEventListener("click", function (): void   {
     playSample(1);
-    recbeat(Drumpad[1]);
+    recbeat(1);
     });
 
-document.querySelector(".drumpad3").addEventListener("click", () =>  {
+document.querySelector(".drumpad3").addEventListener("click", function (): void   {
     playSample(2);
-    recbeat(Drumpad[2]);
+    recbeat(2);
     });
     
-document.querySelector(".drumpad4").addEventListener("click", () =>  {
+document.querySelector(".drumpad4").addEventListener("click", function (): void   {
     playSample(3);
-    recbeat(Drumpad[3]);
+    recbeat(3);
     });
 
-document.querySelector(".drumpad5").addEventListener("click", () =>  {
+document.querySelector(".drumpad5").addEventListener("click", function (): void  {
     playSample(4);
-    recbeat(Drumpad[4]);
+    recbeat(4);
     });
 
-document.querySelector(".drumpad6").addEventListener("click", () =>  {
+document.querySelector(".drumpad6").addEventListener("click", function (): void   {
     playSample(5);
-    recbeat(Drumpad[5]);
+    recbeat(5);
     });
 
-document.querySelector(".drumpad7").addEventListener("click", () =>  {
+document.querySelector(".drumpad7").addEventListener("click", function (): void   {
     playSample(6);
-    recbeat(Drumpad[6]);
+    recbeat(6);
     });
 
-document.querySelector(".drumpad8").addEventListener("click", () =>  {
+document.querySelector(".drumpad8").addEventListener("click", function (): void  {
     playSample(7);
-    recbeat(Drumpad[7]);
+    recbeat(7);
     });
 
-document.querySelector(".drumpad9").addEventListener("click", () => {
+document.querySelector(".drumpad9").addEventListener("click", function (): void  {
     playSample(8);
-    recbeat(Drumpad[8]);
+    recbeat(8);
     });
 
 
-let trash: HTMLElement = document.querySelector(".fa-trash-alt");
-let recbutton: HTMLElement = document.querySelector(".fa-microphone");
-let beat: number [] = [];
-let abfrage: boolean;
-
-// Funktion  für PlayButton ÄNDERN, playbutton wurde gelöscht
-document.querySelector(".buttons").addEventListener("click", function() {
-    setInterval(function() {
-    playbutton();
-    }, 
-                500 );
-    });
-
-
-    
+    // Funktion  Drumpads, verbessert vom letzten Mal
 function playSample(i: number): void {
-        Drumpad[i].play();
+Drumpad[i].play();
 }
 
 
+    //Variabeln Rec & delete 
+let trash: HTMLElement = document.querySelector(".fa-trash-alt");
+let recbutton: HTMLElement = document.querySelector(".fa-microphone");
+
+let beat: number [] = [];
+let abfrage: boolean;
+
+// Funktion & Variablen play pause
+
+let playButton: HTMLElement = document.querySelector(".fa-play");
+let pauseButton: HTMLElement = document.querySelector(".fa-stop");
+
+let myInterval: number;    
+let x: number = 0;
+
+
+
+    //Eventlistener für Play und Pause Button
+playButton.addEventListener("click", () => {
+        playSchleife(true);
+        playButton.classList.add("inactive");
+        pauseButton.classList.remove("inactive"); 
+    });
+
+pauseButton.addEventListener("click", () => {
+        playSchleife(false);
+        pauseButton.classList.add("inactive");
+        playButton.classList.remove("inactive");
+    });
+     //Eventlistener rec & delete
 recbutton.addEventListener("click", () => {
     if (recbutton.classList.contains("active")) {
         recbutton.classList.remove("active");
@@ -90,67 +105,34 @@ recbutton.addEventListener("click", () => {
         recbutton.classList.add("active");
         abfrage = true;
     }
-    recbeat;
 });
 
 trash.addEventListener("click", () => {
-    deletingBeat();
+    beat.splice(0, beat.length);
 });
 
-
-
-function recbeat (i: HTMLAudioElement)  {
-    console.log(abfrage);
+//Recording
+function recbeat (i: number): void   {
     if (abfrage == true) {
         beat.push(i);
-        console.log(beat.length);
     }
 }
 
-function deletingBeat () {
-    beat.splice(0, beat.length);
-    console.log(beat.length);
-}
 
-let playButton: HTMLElement = document.querySelector(".fa-play");
-let pauseButton: HTMLElement = document.querySelector(".fa-stop");
-let myInterval;    
-let i; 
-
-
- //Eventlistener für Play und Pause Button
-playButton.addEventListener("click", () => {
-playSchleife(true);
-playButton.classList.add("inactive");
-pauseButton.classList.remove("inactive");
-
-});
-
-pauseButton.addEventListener("click", () => {
-    playSchleife(false);
-    pauseButton.classList.add("inactive");
-    playButton.classList.remove("inactive");
-});
-
-//Funktion für Play und Pause Button
-function playSchleife (b: boolean) {
-
-    if (b == true) {
-        
-        myInterval = setInterval(() => {        
-            
-            if (i < beat.length) {
-                playSample(drumpad[i]);
-                i++;
-            }
-             
-            else {
-                i = 0;
-            }
-        }, 500 );
+    //Funktion play pause
+function playSchleife (b: boolean): void {
+        if (b == true) {      
+            myInterval = setInterval(function (): void  {               
+                if (x < beat.length) {
+                    playSample(beat[x]);
+                    x++;
+                }
+                else {
+                    x = 0;
+                }
+            }, 500 );
+        }
+        else {
+            clearInterval(myInterval);
+        }
     }
-    
-    else {
-        clearInterval(myInterval);
-    }
-}
