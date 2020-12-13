@@ -60,11 +60,12 @@ document.querySelector(".drumpad9").addEventListener("click", function (): void 
     recbeat(8);
     });
 
-// Funktion  Drumpads, verbessert vom letzten Mal
+// Funktion  Drumpads, 
 function playSample(i: number): void {
     Drumpad[i].play();
     
     }
+
 
     
 //.. 
@@ -129,44 +130,13 @@ function playSchleife (b: boolean): void {
             else {
             y = 0;
             }
-            }, 500 );
+        }, 500 );
         }
         else {
             clearInterval(myInterval);
         }
     }
 
-//Additional task as per EIA website  - in progress
-
-window.addEventListener("keydown", function (ArrowDown) {
-    if (ArrowDown.defaultPrevented) {
-      return; // Do nothing if the event was already processed
-    }
-    switch (ArrowDown.key) {
-      case "drumpad1": // IE/Edge specific value
-      case "ArrowDown":
-        // Do something for "down arrow" key press.
-        break;
-      case "drumpad2": // IE/Edge specific value
-      case "ArrowUp":
-        // Do something for "up arrow" key press.
-        break;
-      case "Left": // IE/Edge specific value
-      case "ArrowLeft":
-        // Do something for "left arrow" key press.
-        break;
-      case "Right": // IE/Edge specific value
-      case "ArrowRight":
-        // Do something for "right arrow" key press.
-        break;
-      case "Enter":
-        // Do something for "enter" or "return" key press.
-        break;
-      default:
-        return; // Quit when this doesn't handle the key event.
-    }
-    event.preventDefault();
-    }, 
-    true); 
 
 } 
+

@@ -48,7 +48,7 @@ var Task08;
         playSample(8);
         recbeat(8);
     });
-    // Funktion  Drumpads, verbessert vom letzten Mal
+    // Funktion  Drumpads, 
     function playSample(i) {
         Drumpad[i].play();
     }
@@ -111,35 +111,5 @@ var Task08;
             clearInterval(myInterval);
         }
     }
-    //Additional task as per EIA website  - in progress
-    window.addEventListener("keydown", function (ArrowDown) {
-        if (ArrowDown.defaultPrevented) {
-            return; // Do nothing if the event was already processed
-        }
-        switch (ArrowDown.key) {
-            case "drumpad1": // IE/Edge specific value
-            case "ArrowDown":
-                // Do something for "down arrow" key press.
-                break;
-            case "drumpad2": // IE/Edge specific value
-            case "ArrowUp":
-                // Do something for "up arrow" key press.
-                break;
-            case "Left": // IE/Edge specific value
-            case "ArrowLeft":
-                // Do something for "left arrow" key press.
-                break;
-            case "Right": // IE/Edge specific value
-            case "ArrowRight":
-                // Do something for "right arrow" key press.
-                break;
-            case "Enter":
-                // Do something for "enter" or "return" key press.
-                break;
-            default:
-                return; // Quit when this doesn't handle the key event.
-        }
-        event.preventDefault();
-    }, true);
 })(Task08 || (Task08 = {}));
 //# sourceMappingURL=script1.js.map
