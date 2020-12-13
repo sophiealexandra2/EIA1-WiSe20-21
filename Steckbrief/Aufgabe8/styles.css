@@ -9,6 +9,7 @@ body{
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    background-color: #5f4f63 ;
 }
 
 .drumpad{
@@ -27,19 +28,41 @@ body{
 }
 
 
-.drumpad1, .drumpad2, .drumpad4{
-    background-color: #58787a;
+.drumpad1 {
+    background-color: #e7da96;
 }
 
-.drumpad5, .drumpad3{
-    background-color: #4455ae;
+
+.drumpad2 {background-color: #a18d2a;
 }
 
-.drumpad6, .drumpad9{
+.drumpad3{
+    background-color: #d6d620;
+}
+
+.drumpad4{
+    background-color: #ddc654;
+}
+
+.drumpad5 {
+    background-color: #9eb069;
+}
+
+
+.drumpad6 {
+    background-color: #7b8e41;
+}
+
+.drumpad9{
     background-color: #d7a8fe;
 }
 
-.drumpad7, .drumpad8{
+.drumpad7 {
+    background-color: #64cabb;
+}
+
+
+.drumpad8{
     background-color: #914964;
 }
 
@@ -49,6 +72,11 @@ body{
     position: relative;
 
 }
+
+.buttons:hover {
+    opacity: 0.8;
+}
+
 .fa-play {
     color: lightcoral;
     position: absolute;
@@ -58,7 +86,7 @@ body{
 
 .fas{
     margin: 15px;
-    color: #3f4e45;
+    color: #ffffff;
     font-size: 40px;
 }
 
@@ -72,7 +100,7 @@ body{
 
 
 .active{
-    color: rgba(84, 35, 83, 0.322);
+    color: rgba(117, 217, 202, 0.322);
 }
 
 .inactive{

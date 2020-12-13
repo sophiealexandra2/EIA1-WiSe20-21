@@ -1,7 +1,8 @@
 
+namespace Task08 {
 
-//Sounds//
-let Drumpad = [];
+    //Sounds//
+let Drumpad: HTMLAudioElement[] = [];
 Drumpad[0] = new Audio("./assets/snare.mp3");
 Drumpad[1] = new Audio("./assets/G.mp3");
 Drumpad[2] = new Audio("./assets/F.mp3");
@@ -59,28 +60,23 @@ document.querySelector(".drumpad9").addEventListener("click", function (): void 
     recbeat(8);
     });
 
-
-    // Funktion  Drumpads, verbessert vom letzten Mal
+// Funktion  Drumpads, verbessert vom letzten Mal
 function playSample(i: number): void {
-Drumpad[i].play();
-}
+    Drumpad[i].play();
+    
+    }
 
-
-    //Variabeln Rec & delete 
+    
+//.. 
 let trash: HTMLElement = document.querySelector(".fa-trash-alt");
 let recbutton: HTMLElement = document.querySelector(".fa-microphone");
-
 let beat: number [] = [];
 let abfrage: boolean;
 
-// Funktion & Variablen play pause
-
 let playButton: HTMLElement = document.querySelector(".fa-play");
 let pauseButton: HTMLElement = document.querySelector(".fa-stop");
-
 let myInterval: number;    
-let x: number = 0;
-
+let y: number = 0;
 
 
     //Eventlistener für Play und Pause Button
@@ -88,12 +84,15 @@ playButton.addEventListener("click", () => {
         playSchleife(true);
         playButton.classList.add("inactive");
         pauseButton.classList.remove("inactive"); 
+        console.log("funkt");
     });
 
 pauseButton.addEventListener("click", () => {
         playSchleife(false);
         pauseButton.classList.add("inactive");
         playButton.classList.remove("inactive");
+        console.log("funkt");
+
     });
      //Eventlistener rec & delete
 recbutton.addEventListener("click", () => {
@@ -123,16 +122,51 @@ function recbeat (i: number): void   {
 function playSchleife (b: boolean): void {
         if (b == true) {      
             myInterval = setInterval(function (): void  {               
-                if (x < beat.length) {
-                    playSample(beat[x]);
-                    x++;
-                }
-                else {
-                    x = 0;
-                }
+            if (y < beat.length) {
+            playSample(beat[y]);
+            y++;
+            }
+            else {
+            y = 0;
+            }
             }, 500 );
         }
         else {
             clearInterval(myInterval);
         }
     }
+
+//Additional task as per EIA website  - in progress
+
+window.addEventListener("keydown", function (ArrowDown) {
+    if (ArrowDown.defaultPrevented) {
+      return; // Do nothing if the event was already processed
+    }
+    switch (ArrowDown.key) {
+      case "drumpad1": // IE/Edge specific value
+      case "ArrowDown":
+        // Do something for "down arrow" key press.
+        break;
+      case "drumpad2": // IE/Edge specific value
+      case "ArrowUp":
+        // Do something for "up arrow" key press.
+        break;
+      case "Left": // IE/Edge specific value
+      case "ArrowLeft":
+        // Do something for "left arrow" key press.
+        break;
+      case "Right": // IE/Edge specific value
+      case "ArrowRight":
+        // Do something for "right arrow" key press.
+        break;
+      case "Enter":
+        // Do something for "enter" or "return" key press.
+        break;
+      default:
+        return; // Quit when this doesn't handle the key event.
+    }
+    event.preventDefault();
+    }, 
+    true); 
+
+} 
