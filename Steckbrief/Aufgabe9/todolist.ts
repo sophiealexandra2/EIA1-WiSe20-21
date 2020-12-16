@@ -1,49 +1,54 @@
 var taskInput=document.getElementById("new-task");//Add a new task.
-var addButton=document.getElementsByTagName("button")[0];//first button
+var addButton=document.getElementsByTagName("button")[0];
 var incompleteTaskHolder=document.getElementById("incomplete-tasks");// #incomplete-tasks
 var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
 
+let listIndex: number = 0;
+
+//Amount of task done or completed, needs to be fixed
+
+function anzahl(): void {
+    document.querySelector("h3").innerHTML = listIndex + " in total";
+}
+listIndex++;
+anzahl();
+//
 
 //New task list item
 var createNewTaskElement=function(taskString){
+var listItem=document.createElement("li");
+//input (checkbox)
+var checkBox=document.createElement("input");//checkbx
+//label
+var label=document.createElement("label");//label
+//button for edit
+var editButton=document.createElement("button");//edit button
+//input (text)
+var editInput=document.createElement("input");//text
+//button for delete
+var deleteButton=document.createElement("button");//delete button
 
-	var listItem=document.createElement("li");
+label.innerText=taskString;
 
-	//input (checkbox)
-	var checkBox=document.createElement("input");//checkbx
-	//label
-	var label=document.createElement("label");//label
-	//input (text)
-	var editInput=document.createElement("input");//text
-	//button.edit
-	var editButton=document.createElement("button");//edit button
+//Each elements, needs appending
+checkBox.type="checkbox";
+editInput.type="text";
 
-	//button.delete
-	var deleteButton=document.createElement("button");//delete button
+editButton.innerText="Edit";//innerText encodes special characters, HTML does not.
+editButton.className="edit";
+deleteButton.innerText="Delete";
+deleteButton.className="delete";
 
-	label.innerText=taskString;
-
-	//Each elements, needs appending
-	checkBox.type="checkbox";
-	editInput.type="text";
-
-	editButton.innerText="Edit";//innerText encodes special characters, HTML does not.
-	editButton.className="edit";
-	deleteButton.innerText="Delete";
-	deleteButton.className="delete";
-
-
-
-	//and appending.
-	listItem.appendChild(checkBox);
-	listItem.appendChild(label);
-	listItem.appendChild(editInput);
-	listItem.appendChild(editButton);
-	listItem.appendChild(deleteButton);
-	return listItem;
+listItem.appendChild(checkBox);
+listItem.appendChild(label);
+listItem.appendChild(editInput);
+listItem.appendChild(editButton);
+listItem.appendChild(deleteButton);
+return listItem;
 }
+ 
 
-
+//Needs fixing
 
 var addTask=function(){
 	console.log("Add Task...");
@@ -52,9 +57,10 @@ var addTask=function(){
 	incompleteTaskHolder.appendChild(listItem);
 	bindTaskEvents(listItem, taskCompleted);
 
-	taskInput.value="";
+	taskInput.value=" ";
 
 }
+
 
 //Edit an existing task.
 
@@ -86,6 +92,7 @@ var containsClass=listItem.classList.contains("editMode");
 
 
 //Delete task.
+
 var deleteTask=function(){
 		console.log("Delete Task...");
 
@@ -120,7 +127,6 @@ var taskIncomplete=function(){
 }
 
 
-
 var ajaxRequest=function(){
 	console.log("AJAX Request");
 }
@@ -150,19 +156,11 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
 			checkBox.onchange=checkBoxEventHandler;
 }
 
-//cycle over incompleteTaskHolder ul list items
-	//for each list item
-	for (var i=0; i<incompleteTaskHolder.children.length;i++){
 
-		//bind events to list items chldren(tasksCompleted)
+	for (var i=0; i<incompleteTaskHolder.children.length;i++){
 		bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
 	}
 
-
-
-
-//cycle over completedTasksHolder ul list items
 	for (var i=0; i<completedTasksHolder.children.length;i++){
-	//bind events to list items chldren(tasksIncompleted)
 		bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
 	}

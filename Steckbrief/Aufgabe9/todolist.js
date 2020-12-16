@@ -1,7 +1,15 @@
 var taskInput = document.getElementById("new-task"); //Add a new task.
-var addButton = document.getElementsByTagName("button")[0]; //first button
-var incompleteTaskHolder = document.getElementById("incomplete-tasks"); //ul of #incomplete-tasks
+var addButton = document.getElementsByTagName("button")[0];
+var incompleteTaskHolder = document.getElementById("incomplete-tasks"); // #incomplete-tasks
 var completedTasksHolder = document.getElementById("completed-tasks"); //completed-tasks
+var listIndex = 0;
+//Amount of task done or completed, needs to be fixed
+function anzahl() {
+    document.querySelector("h3").innerHTML = listIndex + " in total";
+}
+listIndex++;
+anzahl();
+//
 //New task list item
 var createNewTaskElement = function (taskString) {
     var listItem = document.createElement("li");
@@ -9,11 +17,11 @@ var createNewTaskElement = function (taskString) {
     var checkBox = document.createElement("input"); //checkbx
     //label
     var label = document.createElement("label"); //label
+    //button for edit
+    var editButton = document.createElement("button"); //edit button
     //input (text)
     var editInput = document.createElement("input"); //text
-    //button.edit
-    var editButton = document.createElement("button"); //edit button
-    //button.delete
+    //button for delete
     var deleteButton = document.createElement("button"); //delete button
     label.innerText = taskString;
     //Each elements, needs appending
@@ -23,7 +31,6 @@ var createNewTaskElement = function (taskString) {
     editButton.className = "edit";
     deleteButton.innerText = "Delete";
     deleteButton.className = "delete";
-    //and appending.
     listItem.appendChild(checkBox);
     listItem.appendChild(label);
     listItem.appendChild(editInput);
@@ -31,14 +38,13 @@ var createNewTaskElement = function (taskString) {
     listItem.appendChild(deleteButton);
     return listItem;
 };
+//Needs fixing
 var addTask = function () {
     console.log("Add Task...");
-    //Create a new list item with the text from the #new-task:
     var listItem = createNewTaskElement(taskInput.value);
-    //Append listItem to incompleteTaskHolder
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
-    taskInput.value = "";
+    taskInput.value = " ";
 };
 //Edit an existing task.
 var editTask = function () {
@@ -106,15 +112,10 @@ var bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
     //Bind taskCompleted to checkBoxEventHandler.
     checkBox.onchange = checkBoxEventHandler;
 };
-//cycle over incompleteTaskHolder ul list items
-//for each list item
 for (var i = 0; i < incompleteTaskHolder.children.length; i++) {
-    //bind events to list items chldren(tasksCompleted)
     bindTaskEvents(incompleteTaskHolder.children[i], taskCompleted);
 }
-//cycle over completedTasksHolder ul list items
 for (var i = 0; i < completedTasksHolder.children.length; i++) {
-    //bind events to list items chldren(tasksIncompleted)
     bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
 }
 //# sourceMappingURL=todolist.js.map
