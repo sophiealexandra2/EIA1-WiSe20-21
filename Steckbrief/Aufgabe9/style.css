@@ -1,7 +1,7 @@
 body {
-    background: rgb(104, 139, 200);
+    background-image: url(./images/backgroundimage.jpg);
     color: rgb(0, 0, 0);
-    font-family: Lato, sans-serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
   }
 
 
@@ -11,12 +11,18 @@ body {
 }
   .container {
     display: block;
+    background-color: rgb(191, 191, 191);
+    padding: 10px;
     width: 400px;
     margin: 50px auto 0;
   }
   ul {
     margin: 0;
     padding: 0;
+  }
+
+  #number { padding-left: 150px;
+
   }
   li * {
     float: left;
@@ -32,10 +38,10 @@ body {
     background: none;
     border: 0px;
     color: rgb(0, 0, 0);
-    font-size: 15px;
+    font-size: 11px;
     width: 60px;
     margin: 10px 0 0;
-    font-family: Lato, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     cursor: pointer;
   }
   button:hover {
@@ -46,7 +52,7 @@ body {
   label[for='new-task'] {
     color: rgb(0, 0, 0);
     font-weight: 700;
-    font-size: 15px;
+    font-size: 11px;
     border-bottom: 2px solid #333;
     padding: 30px 0 10px;
     margin: 0;
@@ -54,14 +60,14 @@ body {
   }
   input[type="text"] {
     margin: 0;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 50px;
     height: 18px;
     padding: 10px;
     border: 1px solid #ddd;
     background: #fff;
     border-radius: 6px;
-    font-family: Lato, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(0, 0, 0);
   }
   input[type="text"]:focus {

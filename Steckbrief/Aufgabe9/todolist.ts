@@ -2,6 +2,19 @@ var taskInput=document.getElementById("new-task");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];
 var incompleteTaskHolder=document.getElementById("incomplete-tasks");// #incomplete-tasks
 var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
+//New task list item
+var createNewTaskElement=function(taskString){
+	var listItem=document.createElement("li");
+	//input (checkbox)
+	var checkBox=document.createElement("input");//checkbx
+	//label
+	var label=document.createElement("label");//label
+	//button for edit
+	var editButton=document.createElement("button");//edit button
+	//input (text)
+	var editInput=document.createElement("input");//text
+	//button for delete
+	var deleteButton=document.createElement("button");//delete button
 
 let listIndex: number = 0;
 
@@ -163,4 +176,5 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
 
 	for (var i=0; i<completedTasksHolder.children.length;i++){
 		bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
+	}
 	}
