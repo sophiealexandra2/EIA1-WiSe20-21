@@ -10,40 +10,24 @@
 </head>
 <body>
     
-    
-    <div class="container">
-      <div class="Title">
-        <p>TO DO LISTE  </p>
-        <h3><span id="number">TO DOS left: 0</span></h3>   
-    </div>
-        <p>
-          <label for="new-task">Neuer Task</label><input id="new-task" type="text"><button>Add</button>
-        </p>
-        <h3>TO DO</h3>
-        <ul id="incomplete-tasks">
-          <li>
-              <input type="checkbox">
-            <label>Pay Bills</label>
-            <input type="text"><button class="edit">Bearbeiten</button>
-            <button class="delete">Löschen</button>
-        </li>
-          <li class="editMode"><input type="checkbox"><label>...</label>
-            <input type="text" value="Go Shopping"><button class="edit">Bearbeiten</button>
-            <button class="delete">Löschen</button>
-        </li>
-        </ul>
-        
-        <h3>Geschafft!</h3>
-        <ul id="completed-tasks">
-          <li><input type="checkbox" checked><label>See the Doctor</label>
-            <input type="text"><button class="edit">Bearbeiten</button>
-            <button class="delete">Löschen</button>
+  <div  class="box1">
+      
+    <h1>To Do List</h1>
+    <h3> 0 in total</h3>
 
-            
-        </li>
-        </ul>
-      </div>
-  
-      <script type="text/javascript" src="app.js"></script>
+    <div>
+         <label>
+            <input id="addNewTasks"  type="text" placeholder="Neuer Task"> 
+            <span class="add">Add</span>
+        </label>
+   
+    </div>
+</div>   
+
+<div class="box2">     
+     <ul id="myList">
+        
+    </ul>  
+</div>   
 </body>
 </html>
