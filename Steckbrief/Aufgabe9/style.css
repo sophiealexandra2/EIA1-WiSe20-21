@@ -50,32 +50,12 @@ h2{
 
 #addNewTasks{
   position: relative;
-  margin: 3px;
-  font-size: medium;
   width: 514px;
   height: 60px;
-  border: 2px solid rgb(76, 76, 76);
+  margin: 3px;
+  font-size: medium;
   border-radius: 40px 40px;
-}
-.add{
-  position: relative;
-  top: -50px;
-  left: 440px;
-  padding: 5px;
-  width: 5%;
-  background: #000000;
-  opacity: 0.7;
-  color: #d9d9d9;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 5px;
-}
-.add:hover{
-  opacity: 1;
+  border: 2px solid rgb(76, 76, 76);
 }
 
 .element{
@@ -90,7 +70,7 @@ h2{
   padding-top: 5%;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 20px;
   left: -20px;
   
 }
@@ -112,6 +92,7 @@ h2{
   position: absolute;
   right: 5%;
   top: 40%;
+  font-size: 20px;
   color: #2d4a3c;
   height: 10px;
   width: 10px;
@@ -121,7 +102,9 @@ h2{
   position: absolute;
   color: #000000;
   left: 5%;
-  top: 35%;
+  font-size: 20px;
+  padding-right: 20px;
+  top: 40%;
   
 }
 .hidden{
@@ -132,7 +115,7 @@ h2{
   position: absolute;
   left: 5%;
   top: 35%;
-  color: #808080;
+  color: #115924;
   height: 20px;
   width: 20px;
 
