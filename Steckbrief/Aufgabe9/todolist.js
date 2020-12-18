@@ -3,7 +3,7 @@ var newTask = document.querySelector("#addNewTasks");
 var liElement = document.querySelector(".element");
 var listIndex = 0;
 function anzahl() {
-    document.querySelector("h3").innerHTML = listIndex + " in total";
+    document.querySelector("h2").innerHTML = listIndex + " in total";
 }
 function createElement() {
     var myLi = document.createElement("li");

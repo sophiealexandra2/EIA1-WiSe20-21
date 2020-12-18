@@ -4,7 +4,7 @@ const liElement: HTMLElement = document.querySelector(".element");
 let listIndex: number = 0;
 
 function anzahl(): void {
-    document.querySelector("h3").innerHTML = listIndex + " in total";
+    document.querySelector("h2").innerHTML = listIndex + " in total";
 }
 
 function createElement (): void {
@@ -27,10 +27,12 @@ function createElement (): void {
     myLi.appendChild(circleIcon);
     myLi.appendChild(checkedIcon);
     
+
     document.querySelector(".add").addEventListener("click", function(): void {
         createElement();
-        
     });
+
+
 
     circleIcon.addEventListener("click", function(): void {
         if (checkedIcon.classList.contains("hidden")) {
