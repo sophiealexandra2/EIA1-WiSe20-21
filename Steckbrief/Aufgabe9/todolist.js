@@ -43,7 +43,6 @@ function createElement() {
 newTask.addEventListener("keypress", function (e) {
     if (e.code === "Enter") {
         createElement();
-        //console.log(list.length);
     }
 });
 //# sourceMappingURL=todolist.js.map

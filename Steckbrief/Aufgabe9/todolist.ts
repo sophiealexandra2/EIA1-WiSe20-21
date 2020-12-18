@@ -3,10 +3,6 @@ const newTask: any = document.querySelector("#addNewTasks");
 const liElement: HTMLElement = document.querySelector(".element");
 let listIndex: number = 0;
 
-
-
-
-
 function anzahl(): void {
     document.querySelector("h3").innerHTML = listIndex + " in total";
 }
@@ -40,8 +36,8 @@ function createElement (): void {
         if (checkedIcon.classList.contains("hidden")) {
             checkedIcon.classList.remove("hidden");
         }   
-            else { 
-                checkedIcon.classList.add("hidden");
+        else { 
+             checkedIcon.classList.add("hidden");
 
             }
    
@@ -62,7 +58,6 @@ function createElement (): void {
 newTask.addEventListener("keypress", (e) => {
     if (e.code === "Enter") {
         createElement();
-        //console.log(list.length);
     }
 
 });
