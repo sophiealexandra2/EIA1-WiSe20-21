@@ -20,6 +20,7 @@ var Aufgabe9;
         myLi.appendChild(textInput);
         myLi.appendChild(circleIcon);
         myLi.appendChild(doneIcon);
+        //counter of tasks
         function amount() {
             document.querySelector("h2").innerHTML = listIndex + " in total";
         }
@@ -39,6 +40,7 @@ var Aufgabe9;
         listIndex++;
         amount();
     }
+    //mit keypress enter bedienbar
     newTask.addEventListener("keypress", function (event) {
         if (event.key == "Enter") {
             createElement();

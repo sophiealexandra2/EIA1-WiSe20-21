@@ -22,7 +22,7 @@ function createElement (): void {
     myLi.appendChild(textInput);
     myLi.appendChild(circleIcon);
     myLi.appendChild(doneIcon);
-    
+     //counter of tasks
     function amount(): void {
         document.querySelector("h2").innerHTML = listIndex + " in total";
     }
@@ -49,7 +49,7 @@ function createElement (): void {
     amount();
 
 }
-
+//mit keypress enter bedienbar
 newTask.addEventListener("keypress", function (event: KeyboardEvent): void {
     if (event.key == "Enter") {
         createElement();
