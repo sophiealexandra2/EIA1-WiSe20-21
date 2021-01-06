@@ -1,20 +1,20 @@
 var Aufgabe9;
 (function (Aufgabe9) {
     var trash = document.querySelector(".fas fa-trash-alt");
-    var newTask = document.querySelector("#addNewTasks");
+    var newTask = document.querySelector("#addaTask");
     var liElement = document.querySelector(".element");
     var listIndex = 0;
     function createElement() {
+        var circleIcon = document.createElement("i");
+        circleIcon.className = "fal fa-circle";
+        var doneIcon = document.createElement("i");
+        doneIcon.className = "fas fa-check hidden";
         var myLi = document.createElement("li");
         myLi.className = "element";
         var trash = document.createElement("i");
         trash.className = "fas fa-trash-alt";
         var textInput = document.createElement("span");
         textInput.innerHTML = newTask.value;
-        var circleIcon = document.createElement("i");
-        circleIcon.className = "fal fa-circle";
-        var doneIcon = document.createElement("i");
-        doneIcon.className = "fas fa-check hidden";
         document.querySelector("#myList").appendChild(myLi);
         myLi.appendChild(trash);
         myLi.appendChild(textInput);
@@ -44,7 +44,7 @@ var Aufgabe9;
     newTask.addEventListener("keypress", function (event) {
         if (event.key == "Enter") {
             createElement();
-            newTask.value = " ";
+            newTask.value = "  ";
         }
     });
 })(Aufgabe9 || (Aufgabe9 = {}));

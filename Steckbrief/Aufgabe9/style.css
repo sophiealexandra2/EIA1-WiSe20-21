@@ -40,7 +40,8 @@ h2{
   width: 800px;
   height: 600px;
   left: 50%;
-  top: 80%;
+  top: 65%;
+  padding: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,30 +49,32 @@ h2{
 
 }
 
-#addNewTasks{
-  position: relative;
+#addaTask{
+  position: absolute;
   width: 514px;
   height: 60px;
-  margin: 3px;
-  font-size: medium;
-  border-radius: 40px 40px;
+  margin: 7px;
+  font-size: 11px;
   border: 2px solid rgb(76, 76, 76);
+  border-radius: 40px 40px;
+  padding-bottom: 5px;
+  
 }
 
 .element{
-  position: relative;
+  position: absolute;
   margin: 8px;
+  padding-top: 5%;
   background-color: #ffffff;
   width: 500px;
   height: 60px;
   border-radius: 10px;
   list-style: none;
-  padding-left: 10%;
-  padding-top: 5%;
+  padding-left: 12%;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  cursor: pointer;
+  cursor: none;
   font-size: 20px;
-  left: -20px;
+  left: 20%;
   
 }
 .element.checked::before {
