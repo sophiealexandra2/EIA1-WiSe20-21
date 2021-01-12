@@ -6,7 +6,7 @@ interface TodoInterface {
 var todosArray: TodoInterface[] = [
     {
         text: "Task1",
-        checked: true
+        checked: false
     },
     {
         text: "Task2",
