@@ -11,6 +11,7 @@ main {
 
 #counter {
     color: rgb(0, 0, 0);
+    font-style: initial
 }
 
 .inputGroup {

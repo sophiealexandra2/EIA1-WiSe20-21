@@ -128,7 +128,9 @@ function deleteTodo(index: number): void {
     drawListToDOM();
 }
 
-//Artyom:
+/**
+    +ArtyomOn
+     */
 window.addEventListener("load", function(): void {
     const artyom: any = new Artyom();
     artyom.addCommands({
@@ -145,7 +147,7 @@ window.addEventListener("load", function(): void {
         artyom.initialize({
             lang: "de-DE"
         });
-        artyom.say("Hey Hey! Sag mir, was du heute erledigen willst.");
+        artyom.say("Hey Hey! Sag mir, mit dem Wort Erstelle Aufgabe was du heute erledigen möchtest");
         setTimeout(function (): void {
             artyom.obey();
         }, 8000);
