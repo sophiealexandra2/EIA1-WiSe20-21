@@ -1,14 +1,14 @@
 var todosArray = [
     {
-        text: "Task1",
+        text: "Task 1",
         checked: false
     },
     {
-        text: "Task2",
+        text: "Task 2",
         checked: false
     },
     {
-        text: "Task3",
+        text: "Task 3",
         checked: false
     }
 ];
@@ -32,7 +32,9 @@ window.addEventListener("load", function () {
     addButtonDOMElement = document.querySelector("#addButton");
     todosDOMElement = document.querySelector("#todos");
     counterDOMElement = document.querySelector("#counter");
-    addButtonDOMElement.addEventListener("click", addTodo);
+    addButtonDOMElement.addEventListener("click", function () {
+        addTodo(inputDOMElement.value);
+    });
     drawListToDOM();
 });
 function drawListToDOM() {
@@ -56,12 +58,12 @@ function drawListToDOM() {
     }
     updateCounter();
 }
-var Done = 1;
-var OffenerTask = 2;
+var Done = 0;
+var OffenerTask = 3;
 function updateCounter() {
     counterDOMElement.innerHTML = todosArray.length + " in total";
-    OffenDOMElement.innerHTML = OffenerTask + " tasks open";
-    DoneDOMElement.innerHTML = Done + " tasks done";
+    OffenDOMElement.innerHTML = OffenerTask + " Tasks Offen";
+    DoneDOMElement.innerHTML = Done + " Tasks Done";
 }
 function addTodo(text) {
     if (inputDOMElement.value != "") {
@@ -73,12 +75,36 @@ function addTodo(text) {
         OffenerTask++;
         drawListToDOM();
     }
+    if (artyomOn == true) {
+        todosArray.unshift({
+            text: text,
+            checked: false
+        });
+        artyomOn = false;
+        OffenerTask++;
+        drawListToDOM();
+    }
 }
 function toggleCheckState(index) {
-    todosArray[index].checked = !todosArray[index].checked;
+    if (todosArray[index].checked == true) {
+        todosArray[index].checked = false;
+        Done--;
+        OffenerTask++;
+    }
+    else if (todosArray[index].checked == false) {
+        todosArray[index].checked = true;
+        Done++;
+        OffenerTask--;
+    }
     drawListToDOM();
 }
 function deleteTodo(index) {
+    if (todosArray[index].checked == true) {
+        Done--;
+    }
+    else if (todosArray[index].checked == false) {
+        OffenerTask--;
+    }
     todosArray.splice(index, 1);
     drawListToDOM();
 }

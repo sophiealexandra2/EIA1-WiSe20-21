@@ -5,15 +5,15 @@ interface TodoInterface {
 
 var todosArray: TodoInterface[] = [
     {
-        text: "Task1",
+        text: "Task 1",
         checked: false
     },
     {
-        text: "Task2",
+        text: "Task 2",
         checked: false
     },
     {
-        text: "Task3",
+        text: "Task 3",
         checked: false
     }
 
@@ -43,7 +43,14 @@ window.addEventListener("load", function(): void {
     addButtonDOMElement = document.querySelector("#addButton");
     todosDOMElement = document.querySelector("#todos");
     counterDOMElement = document.querySelector("#counter");
-    addButtonDOMElement.addEventListener("click", addTodo);
+
+    
+    addButtonDOMElement.addEventListener("click", function(): void {
+        addTodo(inputDOMElement.value);
+    });
+
+
+
     drawListToDOM();
 });
 
@@ -67,13 +74,13 @@ function drawListToDOM(): void {
 
     updateCounter();
 }
-var Done: number = 1;
-var OffenerTask: number = 2;
+var Done: number = 0;
+var OffenerTask: number = 3;
 
 function updateCounter(): void {
     counterDOMElement.innerHTML = todosArray.length + " in total";
-    OffenDOMElement.innerHTML = OffenerTask + " tasks open";
-    DoneDOMElement.innerHTML = Done + " tasks done";
+    OffenDOMElement.innerHTML = OffenerTask + " Tasks Offen";
+    DoneDOMElement.innerHTML = Done + " Tasks Done";
 }
 
 function addTodo(text: string): void {
@@ -86,19 +93,42 @@ function addTodo(text: string): void {
         OffenerTask ++;
         drawListToDOM();
     }
+    if (artyomOn == true) {
+        todosArray.unshift({
+            text: text,
+            checked: false
+        });
+        artyomOn = false;
+        OffenerTask++;
+        drawListToDOM();
+    }
 }
 function toggleCheckState(index: number): void {
-    todosArray[index].checked = !todosArray[index].checked;
-    drawListToDOM();
+    if (todosArray[index].checked == true) {
+        todosArray[index].checked = false;
+        Done--;
+        OffenerTask++;
+    }
+    else if (todosArray[index].checked == false) {
+        todosArray[index].checked = true;
+        Done++;
+        OffenerTask--;
+    }    drawListToDOM();
 }
 
 function deleteTodo(index: number): void {
+    if (todosArray[index].checked == true) {
+        Done--;
+    }
+    else if (todosArray[index].checked == false) {
+        OffenerTask--;
+    }
+    
     todosArray.splice(index, 1);
     drawListToDOM();
 }
 
 //Artyom:
-
 window.addEventListener("load", function(): void {
     const artyom: any = new Artyom();
     artyom.addCommands({
